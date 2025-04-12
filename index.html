@@ -1,10 +1,10 @@
-
+# Generate dashboard with buttons
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Google Play Store Analytics</title>
-    <script>
-         button {
+    <title>Google Play Store Data Analytics</title>
+    <style>
+        button {
             margin: 10px;
             padding: 12px 24px;
             font-size: 16px;
@@ -35,7 +35,7 @@
         .size-rating-btn {
             background-color: blue;
         }
-    </script>    
+    </style>
     <script>
         function openPlot(filename, startHour, endHour) {
             const now = new Date();
@@ -50,14 +50,16 @@
     </script>
 </head>
 <body style='background-color: black; color: white; text-align: center;'>
-    <h1><img src='https://tse4.mm.bing.net/th?id=OIP.aK0pFHbj6X0jqS0ZGmqGmAHaEK&pid=Api&P=0&h=180' alt='Google Play Store Logo' width='50' style='vertical-align: middle;'> Google Play Store Analytics</h1>
+    <h1><img src='https://tse4.mm.bing.net/th?id=OIP.aK0pFHbj6X0jqS0ZGmqGmAHaEK&pid=Api&P=0&h=180' alt='Google Play Store Logo' width='50' style='vertical-align: middle;'> Google Play Store Data Analytics</h1>
     
-    <!-- Each button has its own time window -->
-    <button onclick="openPlot('app_rating_distribution (1).html', 00,24)">Sentiment Distribution </button>
-     <button onclick="openPlot('top_categories.html', 15, 17)">Top Categories </button>
-    <button onclick="openPlot('global_installs.html', 18, 20)">Global Installs </button>
-    <button onclick="openPlot('filtered_apps.html', 16, 18)">Filtered Apps </button>
-    <button onclick="openPlot('app_size_vs_rating.html', 17, 19)">App Size vs Rating </button>
+    <!-- Each button has its own time window and color -->
+    <button class="sentiment-btn" onclick="openPlot('app_rating_distribution.html', 14, 15)">Sentiment Distribution </button>
+    <button class="categories-btn" onclick="openPlot('top_categories.html', 15, 16)">Top Categories </button>
+    <button class="installs-btn" onclick="openPlot('global_installs.html', 16, 17)">Global Installs </button>
+    <button class="filtered-btn" onclick="openPlot('filtered_apps.html', 17, 18)">Filtered Apps </button>
+    <button class="size-rating-btn" onclick="openPlot('app_size_vs_rating.html', 18, 19)">App Size vs Rating </button>
 </body>
 </html>
+
+
 
