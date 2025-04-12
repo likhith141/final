@@ -4,6 +4,39 @@
 <head>
     <title>Google Play Store Analytics</title>
     <script>
+      button {
+            margin: 10px;
+            padding: 12px 24px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0c56d0;
+        }
+        .sentiment-btn {
+            background-color: red;
+        }
+        .categories-btn {
+            background-color: yellow;
+            color: black;
+        }
+        .installs-btn {
+            background-color: white;
+            color: black;
+        }
+        .filtered-btn {
+            background-color: green;
+            color: black;
+        }
+        .size-rating-btn {
+            background-color: blue;
+        }
+    </script>    
+    <script>
         function openPlot(filename, startHour, endHour) {
             const now = new Date();
             const hours = now.getHours();
